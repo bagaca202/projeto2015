@@ -1,0 +1,127 @@
+<html>
+	<head> 
+		<title> Newsstand Buzzing </title>
+		<style type="text/css">
+			div.titulo{ /* Estilo da formatação do texto em css(Categorias) */
+			font-family:buxton sketch;
+			font-size:30px;
+			color: white;
+			}
+			div.li{     /*Estilo da formatação do texto em css (Palavras com marcador(pontinhos)) */
+				font-family:  aharoni;
+				color: white;
+			}
+			#divBusca{ /* Estilo da formatação do texto em css (Buscar) */
+				background-color:white;    /* COR Do FUNDO */
+				border:solid 1px;  /* BORDA NORMAL */
+				border-radius:15px;  /* RADIUS PRA FICAR REDONDA A BORDA */
+				width:300px;  /* LARGURA DA BORDA EM PX */
+			}
+ 
+			#txtBusca{
+				float:right;  /* ALINHAR A DIREITA TUDO O QUE DIGITAR */
+				background-color:transparent; /* COR DO FUNDO */
+				padding-right:5px; /* ESPAÇAMENTO A DIREITA */
+				font-style:italic; /* DEIXAR A FONTE EM ITALICO */
+				font-size:18px; /* TAMANHO DA FONTE */
+				border:none; /* PRA NÃO APARECER A LINHA DA BORDA */
+				height:32px; /* ALTURA DA BORDA */
+				width:260px; /* LARGURA DA BORDA */
+			}
+			
+			div.li a{ /* DEIXAR A COR DAS PALAVRAS BRANCAS (REFERENCIA AS PALAVRAS LINKADAS)*/
+				color:white;
+				text-decoration:none;
+			}
+			div.li a:visited{ /* PRA QUANDO VISITAR A OUTRA PÁGINA NÃO MUDAR DE COR */
+				text-decoration:none;
+			}
+			div.li a:hover{ /* PASSAR O MOUSE EM CIMA DA PALAVRA E ALTERA A COR PARA O USUÁRIO PERCEBER QUE ESTÁ PASSANDO O MOUSE */
+				background:white;
+				text-decoration: none;
+				color:black;
+			}
+			
+			div.li a:active{ /* MUDA QUANDO CLICA EM ALGO (FICA SUBLINHADO POR EXEMPLO) */
+				text-decoration:none;
+			}	
+		</style>
+		
+		<script>
+				function funcao1()
+			{
+			alert("Não encontrado!"); // ALERTA EMITIDO QUANDO CLICA NA IMAGEM DE PESQUISA E NÃO TEM CONTEÚDO PORQUE NÃO TEM BANCO DE DADOS//
+			}
+			
+			function EscreveData() {
+
+					var mydate=new Date()
+					
+					var year=mydate.getYear()
+
+					if (year < 1000)
+
+					year+=1900
+
+					var day=mydate.getDay()
+
+					var month=mydate.getMonth()
+
+					var daym=mydate.getDate()
+
+					if (daym<10)
+
+					daym="0"+daym
+
+					var dayarray=new
+
+					Array("Domingo","segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado")
+
+					var montharray=new
+
+					Array("Janeiro","Fevereiro","Março;o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+
+					document.write(""  +dayarray[day]+", "+daym+" de "+montharray[month]+" de "+year+"</b></font></small>")
+			}
+
+			function EscreveHora() {
+
+					agora = new Date (); 
+					
+					horas = agora.getHours ();
+
+					minutos = agora.getMinutes ();
+
+					if (horas < 10) horas = "0" + horas; // CONDIÇAOO P CALCULAR A HORA//
+
+					if (minutos < 10) minutos = "0" + minutos;  // CONDIÇAOO P CALCULAR OS MINUTOS//
+
+
+					document.write(horas+":" +minutos);
+			}
+
+			</script>
+	</head>
+	<body bgcolor = "black">
+	
+	
+    
+	<a onclick="funcao1()"><img src="search3.png" id="btnBusca" alt="Buscar"/></a> <!-- onclick="funcao1 (CHAMAR A FUNÇÃO 1, DO ALERT)-->
+	
+	</div>
+	</br>
+		</br>
+		
+		</br>
+		</br>
+		
+	<p align="center"><font color=white size=4><b>Olá! Que bom ter você aqui!</b></p> <!-- P= CRIAR UM PARAGRÁFO , ALING É PARA ALINHAR NO CENTRO -->
+
+<p align="center"><font color=white size=2><b>Hoje é: <script>EscreveData(); </script></font><font face=arial size=2></p> <!-- PARA APARECER NO SITE A FRASE: HOJE É:  -->
+
+
+<p align="center"><font color=white size=2><b>Agora são: <script>EscreveHora();</script></font></b></p> <!-- PARA APARECER NO SITE A FRASE: AGORA SÃO:/ script É PARA CHAMAR A FUNÇÃO -->
+
+	</body>
+
+</html>
